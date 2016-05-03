@@ -13,12 +13,15 @@ AppBundle\Entity\User:
             type: string
             length: 255
             unique: true
+            nullable: true
         sexe:
             type: string
             length: 255
+            nullable: true
         age:
             type: string
             length: 255
+            nullable: true
 
 
     manyToMany:
