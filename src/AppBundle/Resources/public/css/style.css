@@ -42,4 +42,184 @@ a {
       padding-right: 30px;
   }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #ff7659;
+}
+a.button {
+    display: inline-block;
+    background: #23f3ac;
+    color: #FFF;
+    padding: 5px 18px;
+    border-radius: 15px;
+    font-size: 0.7em;
+    font-weight: 600;
+    -webkit-transition: background 0.2s linear, -webkit-transform 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.32);
+    transition: background 0.2s linear, -webkit-transform 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.32);
+    transition: transform 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.32), background 0.2s linear;
+    transition: transform 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.32), background 0.2s linear, -webkit-transform 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.32);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+a.button:hover {
+    background: #0cd792;
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+}
+
+header.hero {
+    margin: 0 0 40px 0;
+}
+
+@-webkit-keyframes scale-in {
+    0% {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-in {
+    0% {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+section.profile {
+    -webkit-animation: scale-in 0.3s cubic-bezier(0.63, 0.15, 0.03, 1.52) forwards;
+    animation: scale-in 0.3s cubic-bezier(0.63, 0.15, 0.03, 1.52) forwards;
+    padding: 2px;
+    background: #FFF;
+    box-shadow: 4px 2px 20px #888;
+    width: 220px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+section.profile header.user {
+    text-align: center;
+    height: 210px;
+}
+section.profile header.user img {
+    border-radius: 50%;
+    margin: 15px 0 2px;
+    height: 100px;
+    width: 100px;
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transition: all 0.2s cubic-bezier(0.63, 0.15, 0.03, 1);
+    transition: all 0.2s cubic-bezier(0.63, 0.15, 0.03, 1);
+}
+section.profile header.user img:hover {
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
+}
+section.profile header.user h1 {
+    font-size: 1.1em;
+}
+section.profile header.user p {
+    font-size: 0.7em;
+    color: #b0b0b0;
+    margin: 0 0 10px;
+}
+section.profile header.user aside.loves {
+    float: left;
+    width: 45px;
+    height: 100%;
+    background: #f6f6f6;
+    padding: 10px 0;
+}
+section.profile header.user aside.loves i.fa-heart {
+    font-size: 1.3em;
+    color: #ff7659;
+    padding: 6px;
+    border-radius: 50%;
+    background: #FFF;
+    margin: 0 0 2px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.52);
+    transition: all 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.52);
+}
+section.profile header.user aside.loves i.fa-heart:hover {
+    color: #ff3b12;
+    background: #f6f6f6;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+section.profile header.user aside.loves span.count {
+    display: inline;
+    margin: 0 0 20px;
+    font-size: 0.6em;
+    background: #FFF;
+    border-radius: 10px;
+    padding: 1px 5px;
+}
+section.profile ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+section.profile ul.menu li.menu-item {
+    height: 45px;
+    background: #f6f6f6;
+    -webkit-transition: all 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.22);
+    transition: all 0.2s cubic-bezier(0.63, 0.15, 0.03, 1.22);
+}
+section.profile ul.menu li.menu-item i.fa {
+    float: left;
+    width: 45px;
+    height: 100%;
+    text-align: center;
+    background: #efefef;
+    padding: 14px 0;
+    color: #d2d2d2;
+    font-size: 1.1em;
+}
+section.profile ul.menu li.menu-item a {
+    display: block;
+    font-size: 0.8em;
+    color: #b2b2b2;
+    padding: 14px 15px 14px 60px;
+}
+section.profile ul.menu li.menu-item.active {
+    background: #f3f3f3;
+}
+section.profile ul.menu li.menu-item.active a {
+    color: #787878;
+}
+section.profile ul.menu li.menu-item.active i.fa {
+    background: #f0f0f0;
+    color: #787878;
+}
+section.profile ul.menu li.menu-item:hover {
+    margin-left: -45px;
+}
+section.profile ul.menu li.menu-item:hover i.fa {
+    border-right: 2px solid #ff7659;
+}
+section.profile ul.menu li.menu-item:nth-of-type(2n) {
+    background: #FFF;
+}
+section.profile ul.menu li.menu-item:nth-of-type(2n) i.fa {
+    background: #f6f6f6;
+}

@@ -1,3 +1,9 @@
+
 geolocalisation:
     path: /geoloc
     defaults: { _controller: AppBundle:Default:geoloc}
+homepage:
+    path:     /
+    defaults: { _controller: AppBundle:Default:index }
+    methods: [POST, GET]
+

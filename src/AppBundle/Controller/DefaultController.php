@@ -8,9 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     */
+    
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
@@ -19,8 +17,12 @@ class DefaultController extends Controller
         ));
     }
 
+
     public function geolocAction()
     {
         return $this->render("AppBundle:Default:geolocalisation.html.twig");
     }
+
+    
+
 }
