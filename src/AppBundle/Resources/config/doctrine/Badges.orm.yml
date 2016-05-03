@@ -1,0 +1,22 @@
+AppBundle\Entity\Badges:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\BadgesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomBadge:
+            type: string
+            length: 255
+            unique: true
+            column: nom_badge
+
+    manyToMany:
+        fid_user_badges:
+            targetEntity: AppBundle\Entity\User
+            mappedBy: Badges
+    lifecycleCallbacks: {  }

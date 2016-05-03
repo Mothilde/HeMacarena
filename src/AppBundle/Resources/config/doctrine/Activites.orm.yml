@@ -1,0 +1,30 @@
+AppBundle\Entity\Activites:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ActivitesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomActivite:
+            type: string
+            length: 255
+            unique: true
+            column: nom_activite
+
+    manyToOne:
+        fidCategorie:
+            targetEntity: AppBundle\Entity\Categorie
+            joinColumn:
+                name: fid_categorie
+                referencedColumn: id
+                nullable: true
+
+    manyToMany:
+        fid_Activites_User:
+            targetEntity: AppBundle\Entity\User
+            mappedBy: Activites
+    lifecycleCallbacks: {  }

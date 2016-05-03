@@ -1,0 +1,48 @@
+AppBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pseudo:
+            type: string
+            length: 255
+            unique: true
+        sexe:
+            type: string
+            length: 255
+        age:
+            type: string
+            length: 255
+
+
+    manyToMany:
+        fidBadges:
+            targetEntity: AppBundle\Entity\Badges
+            inversedBy: User
+            joinTable:
+                name: User_Badges
+                joinColumns:
+                    user_id:
+                        referencedColumn: id
+                inversedJoinColumns:
+                    badges_id:
+                        referencedColumn: id
+
+        fidActivites:
+            targetEntity: AppBundle\Entity\Activites
+            inversedBy: User
+            joinTable:
+                name: User_Activites
+                joinColumns:
+                    user_id:
+                        referencedColumn: id
+                inversedJoinColumns:
+                    activites_id:
+                        referencedColumn: id
+    lifecycleCallbacks: {  }
