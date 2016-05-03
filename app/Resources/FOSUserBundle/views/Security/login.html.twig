@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}He Macarena{% endblock %}</title>
+    {% block stylesheets %}
+        <!-- Appel des bibliothèques Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/bootstrap.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/bootstrap-theme.css') }}" />
+        <!-- Appel de nos feuilles de style CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/style.css') }}" />
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div class="navbar_homepage">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+
+                <li>
+                    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                </li>
+
+                <li> <a href="#">Profil</a> </li>
+                <li> <a href="#">Lien 4</a> </li>
+                <li> <a href="#">Badges</a> </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+    <div id="login">
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required" /> <br/>
+
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label> <br/>
+
+    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+</form>
+    </div>
+    
+    <div id="home">
+        <img id="home" src="{{ asset ('/bundles/framework/images/le-defi.png') }}" alt="home page"/>
+    </div>
+{% endblock fos_user_content %}
