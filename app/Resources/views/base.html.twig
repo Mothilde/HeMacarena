@@ -8,6 +8,8 @@
                 <!-- Appel des bibliothèques Bootstrap -->
                 <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/bootstrap.css') }}" />
                 <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/bootstrap-theme.css') }}" />
+                <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700'>
+                <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
                 <!-- Appel de nos feuilles de style CSS -->
                 <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/style.css') }}" />
         {% endblock %}
@@ -29,8 +31,8 @@
                 <div class="collapse navbar-collapse" id="navbar-primary-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{ path ('fos_user_security_login') }}">Connexion</a></li>
-                        <li><a href="{{ path ('fos_user_security_check') }}">Profil</a></li>
-                        <li><a href="#">Activité</a></li>
+                        <li><a href="{{ path ('fos_user_profile_show') }}">Profil</a></li>
+                        <li><a href="#">Défis</a></li>
                         <li><a href="#">Link</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -40,6 +42,7 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
     <body>
-
+    {%  block body %}
+    {% endblock %}
     </body>
 </html>

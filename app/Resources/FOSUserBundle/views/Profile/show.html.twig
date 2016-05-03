@@ -1,1 +1,33 @@
-{% extends'base.html.twig' %}
+{% extends "base.html.twig" %}
+
+{% block fos_user_content %}
+{% include "FOSUserBundle:Profile:show_content.html.twig" %}
+{% endblock %}
+
+{% block body %}
+    <html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Profil</title>
+
+    </head>
+
+    <body id="carte">
+
+    <section class="profile">
+        <header class="user">
+            <aside class="loves"><a href="#"><i class="fa fa-heart"></i></a><span class="count">1</span></aside><img src="{{ asset ('/bundles/framework/images/jerome.png') }}"/>
+            <h1>Jerome</h1>
+            <p>Dev'</p><a href="#" class="button"><i class="fa fa-plus"></i>&nbsp; Ajouter</a>
+        </header>
+        <ul class="menu">
+            <li class="menu-item active"><i class="fa fa-user"></i><a href="#">Profil</a></li>
+            <li class="menu-item"><i class="fa fa-clock-o"></i><a href="#">Centres d'intérêts</a></li>
+            <li class="menu-item"><i class="fa fa-headphones"></i><a href="#">Défis</a></li>
+        </ul>
+    </section>
+
+    </body>
+    </html>
+{% endblock %}
+
