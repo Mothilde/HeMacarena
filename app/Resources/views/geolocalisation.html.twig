@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block tittle %}Géolocalisation{% endblock %}</title>
-    {% block stylesheet %}
-        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/geo.css') }}" />
-    {% endblock %}
-</head>
-
+{% extends('base.html.twig') %}
+{% block body %}
 <body onload="initialize()">
     <div id="map_canvas"></div>
 
@@ -53,6 +45,10 @@
         };
     </script>
     {% endblock %}
-</body>
+    <div class="buton">
+        <input type="button" value="Defier" href="lien"/>
+    </div>
 
-</html>
+</body>
+{% endblock %}
+

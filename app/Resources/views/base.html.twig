@@ -10,8 +10,11 @@
                 <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/bootstrap-theme.css') }}" />
                 <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700'>
                 <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
-                <!-- Appel de nos feuilles de style CSS -->
-                <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/style.css') }}" />
+
+            <!-- Appel de nos feuilles de style CSS -->
+
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/style.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/geo.css') }}" />
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -36,7 +39,7 @@
                         <li><a href="#">Activité</a></li>
                         <li><a href="{{ path ('fos_user_profile_show') }}">Profil</a></li>
                         <li><a href="#">Défis</a></li>
-                        <li><a href="{{ path ('geolocalisation.html.twig') }}">Link</a></li>
+                        <li><a href="{{ path ('geoloc') }}">Link</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
