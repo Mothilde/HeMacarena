@@ -17,17 +17,17 @@ class DefaultController extends Controller
         ));
     }
 
-<<<<<<< HEAD
+
     public function profilcAction()
     {
         return $this->render('AppBundle::profilc.html.twig');
-=======
+    }
 
     public function geolocAction ()
     {
 
         return $this->render('::geolocalisation.html.twig');
->>>>>>> 900cd015d64dde3e426af39a9f9e8902d7605542
+
     }
     
 
