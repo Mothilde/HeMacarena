@@ -18,11 +18,11 @@ class DefaultController extends Controller
     }
 
 
-    public function geolocAction()
+    public function geolocAction ()
     {
-        return $this->render("AppBundle:Default:geolocalisation.html.twig");
-    }
 
+        return $this->render('::geolocalisation.html.twig');
+    }
     
 
 }
