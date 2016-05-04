@@ -223,3 +223,8 @@ section.profile ul.menu li.menu-item:nth-of-type(2n) {
 section.profile ul.menu li.menu-item:nth-of-type(2n) i.fa {
     background: #f6f6f6;
 }
+
+.col-xs-12.badges
+{
+    margin-left: 40px;
+}

@@ -18,13 +18,13 @@
         <header class="user">
             <aside class="loves"><a href="#"></a></aside><img src="{{ asset ('/bundles/framework/images/jerome.png') }}"/>
             <h1>Jerome</h1>
-            <p>Dev'</p><a href="{{ '' }}" class="button"><i class="fa fa-plus"></i>&nbsp; Lancer un défi !</a>
+            <p>Dev'</p><a href="{{ path ('geoloc') }}" class="button"><i class="fa fa-plus"></i>&nbsp; Lancer un défi !</a>
         </header>
         <ul class="menu">
             <li class="menu-item active"><i class="fa fa-user"></i><a href="#">Profil</a></li>
             <li class="menu-item"><i class="fa fa-users"></i><a href="#">Centres d'intérêts</a></li>
             <li class="menu-item"><i class="fa fa-gamepad"></i><a href="#">Défis</a></li>
-            <li class="menu-item"><i class="fa fa-trophy"></i><a href="#">Badges</a></li>
+            <li class="menu-item"><i class="fa fa-trophy"></i><a href="{{ path ('badges') }}">Badges</a></li>
         </ul>
     </section>
 

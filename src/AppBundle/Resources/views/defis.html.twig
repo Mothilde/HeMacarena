@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="row">
+            <h2 style="text-align: center">T'es cap ou pas cap ???</h2>
+
+            <hr>
+
+            <div class="col-md-4 col-md-push-4">
+                <div class="alert alert-danger">De danser la macarena avec moi?</div>
+                <img class="img-responsive img-circle" src="{{ asset ('/bundles/framework/images/macarena.gif') }}" alt="Greece-1173 - Temple of Athena by Dennis Jarvis, on Flickr">
+            </div>
+            <br>
+            <div class="col-md-4 col-md-pull-4 ">
+                <div class="alert alert-info">De rester scotché à Thomas 20 min ?</div>
+                <img class="img-responsive img-circle" src="{{ asset ('/bundles/framework/images/thomas.jpg') }}" alt="Greece-1173 - Temple of Athena by Dennis Jarvis, on Flickr">
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="alert alert-success">D'essayer d'empêcher Greg de boire du café pendant 1 journée??</div>
+                <img class="img-responsive img-circle" src="{{ asset ('/bundles/framework/images/cafe.jpg') }}" alt="Greece-1173 - Temple of Athena by Dennis Jarvis, on Flickr">
+            </div>
+
+        </div>
+
+        <hr>
+
+
+    </div>
+{% endblock %}

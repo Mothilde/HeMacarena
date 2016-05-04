@@ -7,3 +7,13 @@ profilc:
     path:    /profilc
     defaults: { _controller: AppBundle:Default:profilc }
     methods: [POST, GET]
+
+defis:
+    path:    /defis
+    defaults: { _controller: AppBundle:Default:defis }
+    methods: [POST, GET]
+
+badges:
+    path:    /badges
+    defaults: { _controller: AppBundle:Default:badges }
+    methods: [POST, GET]
