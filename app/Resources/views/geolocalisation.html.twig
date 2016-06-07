@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block tittle %}Géolocalisation{% endblock %}</title>
-    {% block stylesheet %}
-        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/framework/css/geo.css') }}" />
-    {% endblock %}
-</head>
-
+{% extends('base.html.twig') %}
+{% block body %}
 <body onload="initialize()">
     <div id="map_canvas"></div>
 
@@ -54,8 +46,9 @@
     </script>
     {% endblock %}
     <div class="buton">
+
         <a href="{{ path ('profilc') }}" class="button"><i class="fa fa-plus"></i>&nbsp; Defier !</a>
     </div>
 </body>
+{% endblock %}
 
-</html>

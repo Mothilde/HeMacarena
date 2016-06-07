@@ -21,6 +21,10 @@ class DefaultController extends Controller
     public function profilcAction()
     {
         return $this->render('AppBundle::profilc.html.twig');
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 6f7ebab884d9f27ad0bb598fa1d76b08ea627087
 
     }
 
@@ -29,12 +33,15 @@ class DefaultController extends Controller
 
         return $this->render('::geolocalisation.html.twig');
 
+<<<<<<< HEAD
     }
 
     public function defisAction()
     {
         return $this->render('AppBundle::defis.html.twig');
 
+=======
+>>>>>>> 6f7ebab884d9f27ad0bb598fa1d76b08ea627087
     }
 
     public function badgesAction()
